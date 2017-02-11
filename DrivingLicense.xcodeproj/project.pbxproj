@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5E12A31E4F67EE00FBB205 /* homePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E12A11E4F67EE00FBB205 /* homePageViewController.m */; };
+		2C5E12A41E4F67EE00FBB205 /* homePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E12A21E4F67EE00FBB205 /* homePageViewController.xib */; };
+		2C5E12A81E4F682D00FBB205 /* userPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E12A61E4F682D00FBB205 /* userPageViewController.m */; };
+		2C5E12A91E4F682D00FBB205 /* userPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E12A71E4F682D00FBB205 /* userPageViewController.xib */; };
 		2CCE37EF1E2E4B0000210B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE37EE1E2E4B0000210B49 /* main.m */; };
 		2CCE37F21E2E4B0000210B49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE37F11E2E4B0000210B49 /* AppDelegate.m */; };
 		2CCE37F51E2E4B0000210B49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE37F41E2E4B0000210B49 /* ViewController.m */; };
@@ -38,6 +42,12 @@
 /* Begin PBXFileReference section */
 		17FE8149CAAAC5ADE63F83FF /* libPods-DrivingLicense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrivingLicense.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5E129F1E4E1A3100FBB205 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
+		2C5E12A01E4F67EE00FBB205 /* homePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homePageViewController.h; sourceTree = "<group>"; };
+		2C5E12A11E4F67EE00FBB205 /* homePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homePageViewController.m; sourceTree = "<group>"; };
+		2C5E12A21E4F67EE00FBB205 /* homePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homePageViewController.xib; sourceTree = "<group>"; };
+		2C5E12A51E4F682D00FBB205 /* userPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userPageViewController.h; sourceTree = "<group>"; };
+		2C5E12A61E4F682D00FBB205 /* userPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userPageViewController.m; sourceTree = "<group>"; };
+		2C5E12A71E4F682D00FBB205 /* userPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userPageViewController.xib; sourceTree = "<group>"; };
 		2CCE37EA1E2E4B0000210B49 /* DrivingLicense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrivingLicense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE37EE1E2E4B0000210B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CCE37F01E2E4B0000210B49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +106,12 @@
 			children = (
 				2CCE37F61E2E4B0000210B49 /* Main.storyboard */,
 				2CCE37FB1E2E4B0000210B49 /* LaunchScreen.storyboard */,
+				2C5E12A01E4F67EE00FBB205 /* homePageViewController.h */,
+				2C5E12A11E4F67EE00FBB205 /* homePageViewController.m */,
+				2C5E12A21E4F67EE00FBB205 /* homePageViewController.xib */,
+				2C5E12A51E4F682D00FBB205 /* userPageViewController.h */,
+				2C5E12A61E4F682D00FBB205 /* userPageViewController.m */,
+				2C5E12A71E4F682D00FBB205 /* userPageViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -308,8 +324,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5E12A41E4F67EE00FBB205 /* homePageViewController.xib in Resources */,
 				2CCE37FD1E2E4B0000210B49 /* LaunchScreen.storyboard in Resources */,
 				2CCE37FA1E2E4B0000210B49 /* Assets.xcassets in Resources */,
+				2C5E12A91E4F682D00FBB205 /* userPageViewController.xib in Resources */,
 				2CCE37F81E2E4B0000210B49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +401,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5E12A81E4F682D00FBB205 /* userPageViewController.m in Sources */,
+				2C5E12A31E4F67EE00FBB205 /* homePageViewController.m in Sources */,
 				2CCE37F51E2E4B0000210B49 /* ViewController.m in Sources */,
 				2CCE37F21E2E4B0000210B49 /* AppDelegate.m in Sources */,
 				2CCE37EF1E2E4B0000210B49 /* main.m in Sources */,
@@ -537,7 +557,7 @@
 				INFOPLIST_FILE = DrivingLicense/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pjhubs.DrivingLicense;
+				PRODUCT_BUNDLE_IDENTIFIER = "peujun-weng.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -551,7 +571,7 @@
 				INFOPLIST_FILE = DrivingLicense/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pjhubs.DrivingLicense;
+				PRODUCT_BUNDLE_IDENTIFIER = "peujun-weng.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
