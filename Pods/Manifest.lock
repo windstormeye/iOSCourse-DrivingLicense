@@ -14,13 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BmobSDK (2.1.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - BmobSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BmobSDK: 395bb328a51397fe008297e19e2defa21be2b329
 
-PODFILE CHECKSUM: 0b7247e2655abad43b3945298293ba1bd384b1c7
+PODFILE CHECKSUM: 325b2a6d4be3965dfbeb1e53430c4186b8063aab
 
 COCOAPODS: 1.1.1

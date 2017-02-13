@@ -25,8 +25,10 @@
         _contentTabBarController = [[UITabBarController alloc] init];
         homePageViewController *home  = [[homePageViewController alloc] init];
         userPageViewController *user = [[userPageViewController alloc] init];
-        UINavigationController *homeNC = [[UINavigationController alloc] initWithRootViewController:user];
-        UINavigationController *userNC = [[UINavigationController alloc] initWithRootViewController:home];
+        UINavigationController *homeNC = [[UINavigationController alloc] initWithRootViewController:home];
+        homeNC.navigationBar.translucent = NO;
+        UINavigationController *userNC = [[UINavigationController alloc] initWithRootViewController:user];
+        userNC.navigationBar.translucent = NO;
         _contentTabBarController.viewControllers = [[NSArray alloc] initWithObjects:homeNC, userNC, nil];
         
         UIImage *userImgNormal  = [[UIImage imageNamed:@"user_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
