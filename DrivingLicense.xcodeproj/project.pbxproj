@@ -11,6 +11,14 @@
 		2C5E12A41E4F67EE00FBB205 /* homePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E12A21E4F67EE00FBB205 /* homePageViewController.xib */; };
 		2C5E12A81E4F682D00FBB205 /* userPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E12A61E4F682D00FBB205 /* userPageViewController.m */; };
 		2C5E12A91E4F682D00FBB205 /* userPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E12A71E4F682D00FBB205 /* userPageViewController.xib */; };
+		2CB896E01E52D5AE00FC59F9 /* apilib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB896DF1E52D5AE00FC59F9 /* apilib.a */; };
+		2CB896E21E52D5C600FC59F9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB896E11E52D5C600FC59F9 /* AdSupport.framework */; };
+		2CB896E41E52D5CE00FC59F9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB896E31E52D5CE00FC59F9 /* CoreTelephony.framework */; };
+		2CB896E61E52D5DB00FC59F9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB896E51E52D5DB00FC59F9 /* SystemConfiguration.framework */; };
+		2CB896E91E52D96F00FC59F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB896E81E52D96F00FC59F9 /* CoreGraphics.framework */; };
+		2CB896EB1E52D97600FC59F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB896EA1E52D97600FC59F9 /* QuartzCore.framework */; };
+		2CB896EF1E52E6A400FC59F9 /* AdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB896ED1E52E6A400FC59F9 /* AdViewController.m */; };
+		2CB896F01E52E6A400FC59F9 /* AdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB896EE1E52E6A400FC59F9 /* AdViewController.xib */; };
 		2CCE37EF1E2E4B0000210B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE37EE1E2E4B0000210B49 /* main.m */; };
 		2CCE37F21E2E4B0000210B49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE37F11E2E4B0000210B49 /* AppDelegate.m */; };
 		2CCE37F51E2E4B0000210B49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE37F41E2E4B0000210B49 /* ViewController.m */; };
@@ -48,6 +56,17 @@
 		2C5E12A51E4F682D00FBB205 /* userPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userPageViewController.h; sourceTree = "<group>"; };
 		2C5E12A61E4F682D00FBB205 /* userPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userPageViewController.m; sourceTree = "<group>"; };
 		2C5E12A71E4F682D00FBB205 /* userPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userPageViewController.xib; sourceTree = "<group>"; };
+		2CB896D81E52C97600FC59F9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2CB896DF1E52D5AE00FC59F9 /* apilib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = apilib.a; path = ../../../../../../../../../../../Desktop/apilib.a; sourceTree = "<group>"; };
+		2CB896E11E52D5C600FC59F9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		2CB896E31E52D5CE00FC59F9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2CB896E51E52D5DB00FC59F9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2CB896E71E52D6D000FC59F9 /* JOYConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOYConnect.h; sourceTree = "<group>"; };
+		2CB896E81E52D96F00FC59F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2CB896EA1E52D97600FC59F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2CB896EC1E52E6A400FC59F9 /* AdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewController.h; sourceTree = "<group>"; };
+		2CB896ED1E52E6A400FC59F9 /* AdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewController.m; sourceTree = "<group>"; };
+		2CB896EE1E52E6A400FC59F9 /* AdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdViewController.xib; sourceTree = "<group>"; };
 		2CCE37EA1E2E4B0000210B49 /* DrivingLicense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrivingLicense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE37EE1E2E4B0000210B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CCE37F01E2E4B0000210B49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +92,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB896EB1E52D97600FC59F9 /* QuartzCore.framework in Frameworks */,
+				2CB896E91E52D96F00FC59F9 /* CoreGraphics.framework in Frameworks */,
+				2CB896E61E52D5DB00FC59F9 /* SystemConfiguration.framework in Frameworks */,
+				2CB896E41E52D5CE00FC59F9 /* CoreTelephony.framework in Frameworks */,
+				2CB896E21E52D5C600FC59F9 /* AdSupport.framework in Frameworks */,
+				2CB896E01E52D5AE00FC59F9 /* apilib.a in Frameworks */,
 				2F634B23FEB4DDF1554E4002 /* libPods-DrivingLicense.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +137,9 @@
 				2C5E12A51E4F682D00FBB205 /* userPageViewController.h */,
 				2C5E12A61E4F682D00FBB205 /* userPageViewController.m */,
 				2C5E12A71E4F682D00FBB205 /* userPageViewController.xib */,
+				2CB896EC1E52E6A400FC59F9 /* AdViewController.h */,
+				2CB896ED1E52E6A400FC59F9 /* AdViewController.m */,
+				2CB896EE1E52E6A400FC59F9 /* AdViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -119,6 +147,7 @@
 		2C5E129D1E4E189C00FBB205 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2CB896E71E52D6D000FC59F9 /* JOYConnect.h */,
 				2CCE37F31E2E4B0000210B49 /* ViewController.h */,
 				2CCE37F41E2E4B0000210B49 /* ViewController.m */,
 			);
@@ -128,6 +157,7 @@
 		2C5E129E1E4E18B000FBB205 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				2CB896D81E52C97600FC59F9 /* PrefixHeader.pch */,
 				2CCE37F01E2E4B0000210B49 /* AppDelegate.h */,
 				2CCE37F11E2E4B0000210B49 /* AppDelegate.m */,
 				2CCE37F91E2E4B0000210B49 /* Assets.xcassets */,
@@ -200,6 +230,12 @@
 		D61B24AC6B3BCC36E65CC964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CB896EA1E52D97600FC59F9 /* QuartzCore.framework */,
+				2CB896E81E52D96F00FC59F9 /* CoreGraphics.framework */,
+				2CB896E51E52D5DB00FC59F9 /* SystemConfiguration.framework */,
+				2CB896E31E52D5CE00FC59F9 /* CoreTelephony.framework */,
+				2CB896E11E52D5C600FC59F9 /* AdSupport.framework */,
+				2CB896DF1E52D5AE00FC59F9 /* apilib.a */,
 				17FE8149CAAAC5ADE63F83FF /* libPods-DrivingLicense.a */,
 			);
 			name = Frameworks;
@@ -325,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5E12A41E4F67EE00FBB205 /* homePageViewController.xib in Resources */,
+				2CB896F01E52E6A400FC59F9 /* AdViewController.xib in Resources */,
 				2CCE37FD1E2E4B0000210B49 /* LaunchScreen.storyboard in Resources */,
 				2CCE37FA1E2E4B0000210B49 /* Assets.xcassets in Resources */,
 				2C5E12A91E4F682D00FBB205 /* userPageViewController.xib in Resources */,
@@ -404,6 +441,7 @@
 				2C5E12A81E4F682D00FBB205 /* userPageViewController.m in Sources */,
 				2C5E12A31E4F67EE00FBB205 /* homePageViewController.m in Sources */,
 				2CCE37F51E2E4B0000210B49 /* ViewController.m in Sources */,
+				2CB896EF1E52E6A400FC59F9 /* AdViewController.m in Sources */,
 				2CCE37F21E2E4B0000210B49 /* AppDelegate.m in Sources */,
 				2CCE37EF1E2E4B0000210B49 /* main.m in Sources */,
 			);
@@ -490,6 +528,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DrivingLicense/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -535,6 +574,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DrivingLicense/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

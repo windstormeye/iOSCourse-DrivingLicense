@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BmobSDK/Bmob.h"
+#import "JOYConnect.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [Bmob registerWithAppKey:@"c1b1f0a0d66af132513b58b66df9aa25"];
+    [JOYConnect getConnect:@"4bd2965d9e88d06741983189fa6c6732"];
     return YES;
 }
 

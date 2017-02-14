@@ -6,10 +6,8 @@
 //  Copyright © 2017年 #incloud. All rights reserved.
 //
 
-#define SCREEM_HEIGHT [[UIScreen mainScreen] bounds].size.height
-#define SCREEM_WIDTH [[UIScreen mainScreen] bounds].size.width
-
 #import "userPageViewController.h"
+#import "AdViewController.h"
 
 @interface userPageViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -24,14 +22,14 @@ static NSString *identifierCell = @"identify";
 - (UIScrollView *)scrollView {
     if (!_scrollView)
     {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT)];
+        _scrollView.backgroundColor = [UIColor whiteColor];
     }
     return _scrollView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255/255.0 green:140/255.0 blue:0/255.0 alpha:1.0];
     
     // 隐藏navigationBar底部分割线
@@ -61,7 +59,8 @@ static NSString *identifierCell = @"identify";
 
 - (void)initWithScrollView {
     UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT)];
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT * 0.2)];
+    
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT * 0.20)];
     [tempView addSubview:contentView];
     contentView.backgroundColor = [UIColor colorWithRed:255/255.0 green:140/255.0 blue:0/255.0 alpha:1.0];
     
@@ -82,8 +81,31 @@ static NSString *identifierCell = @"identify";
     middleView.clipsToBounds = YES;
     middleView.layer.cornerRadius = 3;
     middleView.backgroundColor = [UIColor whiteColor];
-    middleView.alpha = 0.8;
+    middleView.alpha = 0.9;
     [tempView addSubview:middleView];
+    
+    UIImageView *diaryImgView = [[UIImageView alloc] initWithFrame:CGRectMake(middleView.frame.size.width * 0.05, (middleView.frame.size.height - middleView.frame.size.width * 0.12) / 2, middleView.frame.size.width * 0.12, middleView.frame.size.width * 0.12)];
+    diaryImgView.image = [UIImage imageNamed:@"book"];
+    [middleView addSubview:diaryImgView];
+    
+    UILabel *diaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(diaryImgView.frame) + middleView.frame.size.width * 0.015, diaryImgView.frame.origin.y , 63, diaryImgView.frame.size.height)];
+    diaryLabel.textAlignment = NSTextAlignmentLeft;
+    diaryLabel.text = @"学车日记";
+    diaryLabel.textColor = [UIColor blackColor];
+    diaryLabel.font = [UIFont systemFontOfSize:15];
+    [middleView addSubview:diaryLabel];
+    
+    CGFloat interval = middleView.frame.size.width / 2 - (diaryImgView.frame.size.width + diaryLabel.frame.size.width) - diaryImgView.frame.origin.x;
+    UIImageView *signInImgView = [[UIImageView alloc] initWithFrame:CGRectMake(middleView.frame.size.width / 2 + interval, (middleView.frame.size.height - middleView.frame.size.width * 0.12) / 2, middleView.frame.size.width * 0.12, middleView.frame.size.width * 0.12)];
+    signInImgView.image = [UIImage imageNamed:@"star"];
+    [middleView addSubview:signInImgView];
+    
+    UILabel *signInLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(signInImgView.frame) + middleView.frame.size.width * 0.015, signInImgView.frame.origin.y , 63, signInImgView.frame.size.height)];
+    signInLabel.textAlignment = NSTextAlignmentLeft;
+    signInLabel.text = @"每日签到";
+    signInLabel.textColor = [UIColor blackColor];
+    signInLabel.font = [UIFont systemFontOfSize:15];
+    [middleView addSubview:signInLabel];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(middleViewUnderView.frame), SCREEM_WIDTH, SCREEM_HEIGHT * 0.4) collectionViewLayout:flowLayout];
@@ -95,7 +117,12 @@ static NSString *identifierCell = @"identify";
     
     tempView.frame = CGRectMake(0, 0, SCREEM_WIDTH, CGRectGetMaxY(self.collectionView.frame));
     [self.scrollView addSubview:tempView];
-    self.scrollView.contentSize = tempView.frame.size;
+    
+    AdViewController *AdView = [[AdViewController alloc] init];
+    AdView.view.frame = CGRectMake(0, SCREEM_HEIGHT - self.tabBarController.tabBar.frame.size.height - 123, SCREEM_WIDTH, 50);
+    [self.scrollView addSubview:AdView.view];
+    
+    self.scrollView.contentSize = CGSizeMake(0, 900);
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -113,7 +140,7 @@ static NSString *identifierCell = @"identify";
 
 //定义每个item 的 margin 边缘
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(20, SCREEM_WIDTH * 0.1, 20, SCREEM_WIDTH * 0.1);//分别为上、左、下、右
+    return UIEdgeInsetsMake(30, SCREEM_WIDTH * 0.1, 20, SCREEM_WIDTH * 0.1);//分别为上、左、下、右
 }
 
 //每个section中不同的行之间的行间距
