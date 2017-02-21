@@ -8,6 +8,7 @@
 
 #import "userPageViewController.h"
 #import "AdViewController.h"
+#import "loginViewController.h"
 
 @interface userPageViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -60,16 +61,27 @@ static NSString *identifierCell = @"identify";
 - (void)initWithScrollView {
     UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT)];
     
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT * 0.20)];
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEM_WIDTH, SCREEM_HEIGHT * 0.25)];
     [tempView addSubview:contentView];
     contentView.backgroundColor = [UIColor colorWithRed:255/255.0 green:140/255.0 blue:0/255.0 alpha:1.0];
     
     UIImageView *userImgView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEM_WIDTH - 60) / 2, 0, 60, 60)];
+    userImgView.userInteractionEnabled = YES;
     [contentView addSubview:userImgView];
     userImgView.clipsToBounds = YES;
     userImgView.layer.cornerRadius = userImgView.frame.size.width / 2;
     userImgView.image = [UIImage imageNamed:@"user"];
-   
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTap)];
+    [userImgView addGestureRecognizer:tap];
+    
+    UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake((contentView.frame.size.width - 70) / 2, CGRectGetMaxY(userImgView.frame) + 5, 70, 20)];
+    userNameLabel.textColor = [UIColor whiteColor];
+    userNameLabel.text = @"未登录";
+    userNameLabel.textAlignment = NSTextAlignmentCenter;
+    userNameLabel.font = [UIFont systemFontOfSize:14];
+    [contentView addSubview:userNameLabel];
+    
     UIView *middleViewUnderView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(contentView.frame), SCREEM_WIDTH, 40)];
     middleUnderViewMaxY = CGRectGetMaxY(middleViewUnderView.frame);
     middleViewUnderView.backgroundColor = [UIColor colorWithRed:232/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];
@@ -119,10 +131,15 @@ static NSString *identifierCell = @"identify";
     [self.scrollView addSubview:tempView];
     
     AdViewController *AdView = [[AdViewController alloc] init];
-    AdView.view.frame = CGRectMake(0, SCREEM_HEIGHT - self.tabBarController.tabBar.frame.size.height - 123, SCREEM_WIDTH, 50);
+    AdView.view.frame = CGRectMake(0, SCREEM_HEIGHT - self.tabBarController.tabBar.frame.size.height - 115, SCREEM_WIDTH, 50);
     [self.scrollView addSubview:AdView.view];
-    
-    self.scrollView.contentSize = CGSizeMake(0, 900);
+}
+
+- (void)imageTap {
+    loginViewController *login = [[loginViewController alloc] init];
+    [self presentViewController:login animated:YES completion:^{
+        NSLog(@"啊哈哈哈哈");
+    }];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

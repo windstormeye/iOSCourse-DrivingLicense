@@ -9,7 +9,7 @@
 #import "AdViewController.h"
 #import "JOYConnect.h"
 
-@interface AdViewController () <JOYConnectDelegate>
+@interface AdViewController ()
 
 @end
 
@@ -17,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [JOYConnect sharedJOYConnect].delegate=self;
     
     [JOYConnect showBan:self adSize:E_SIZE_414x70 showX:0 showY:0];
 }
